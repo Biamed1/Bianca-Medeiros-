@@ -1,1 +1,61 @@
+Domínio do problema
+
+- Mobiliária de vendas de casas
+Entidades
+- Dono da loja
+- Recepcionista
+- Vendedor
+- Cliente
+- Casas
+- Fornecedor
+Classes com seus atributo e métodos
+
+Classe Pessoa:
+
+Atributos:
+- Nome
+- CPF
+- E-mail
+- Cargo
+- Idade
+
+Métodos
+- cadastrarNome
+- cadastrarCPF
+- cadastrarEmail
+- definirCargo
+- cadastraridade
+________________________________________
+Classe Casa:
+
+Atributos:
+- Tipo
+- Modelo
+- Localização
+- Comodidades
+- Estado (novo/alugada)
+- Plantas funcionais
+
+Métodos:
+- cadastrarTipo
+- cadastrarModelo
+- cadastrarLocalização
+- cadastrarComodidades
+- cadastrarEstado
+- cadastrarPlantas
+________________________________________
+Classe Fornecedor:
+
+Atributos:
+- Nome
+- CPF/CNPJ
+- NúmeroTelefone
+- QuantidadeDeCasaVendia/Alugada
+
+Métodos:
+- cadastrarNome
+- cadastrarCPF/CNPJ
+- cadastrarTelefone
+- informarQuantidadeDeCasaVendida/Alugada
+
 
