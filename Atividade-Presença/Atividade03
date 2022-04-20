@@ -1,1 +1,11 @@
+let pilha:Number[] = []
 
+pilha.push(1)
+
+pilha.push(2)
+
+pilha.push(3)
+
+pilha.pop()
+
+console.log(pilha);
