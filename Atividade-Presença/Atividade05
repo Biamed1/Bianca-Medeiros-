@@ -1,6 +1,7 @@
 Domínio do problema
 
-- Mobiliária de vendas de casas
+MOBILIÁRIA DE VENDAS DE CASAS 
+
 Entidades
 - Dono da loja
 - Recepcionista
@@ -8,7 +9,8 @@ Entidades
 - Cliente
 - Casas
 - Fornecedor
-Classes com seus atributo e métodos
+
+CLASSE COM SEUS ATRIBUTOS E METODOS 
 
 Classe Pessoa:
 
