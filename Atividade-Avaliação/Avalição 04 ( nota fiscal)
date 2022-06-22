@@ -1,0 +1,94 @@
+import  { Cliente }  de  "./cliente" ;
+import  { ItemNotaFiscal }  de  "./item_nota_fiscal" ;
+export  class  NotaFiscal  {
+
+    /* Atributos */
+    id : número ;
+    código : número ; 
+    dados : Data ;
+    cliente : Cliente ;
+    itens :   Array < ItemNotaFiscal > ;  
+
+    /* Métodos */
+
+    /* Construtor de métodos */    
+    construtor  ( id : número ,  codigo : número ,  cliente : Cliente  )  {
+        isso . id  =  id ;
+        isso . codigo  =  codigo ;
+        isso . data  =  new  Data ( ) ; 
+        isso . cliente  =  cliente ; 
+        isso . items  =  new  Array < ItemNotaFiscal > ( ) ;
+    }
+
+    /* Métodos Acessores */
+    getid ( ) : numero  {
+        devolva  isso . identificação ;
+    }
+
+    getcodigo ( ) : numero  {
+        devolva  isso . código ;
+    }
+
+    getdata ( ) : Data  {
+        devolva  isso . dados ;
+    }
+
+    /* Métodos Modificadores */     
+    setcodigo ( codigo : número ) : void  {
+        isso . codigo  =  codigo ;
+    }
+
+    setdata ( data : Data ) : void  {
+        isso . dados  =  dados ;
+    }
+
+    adicionarItem ( item : ItemNotaFiscal )  {
+        isso . itens . empurrar ( item ) ;
+    }
+
+    // Percorrer os itens do array e calcular o valor total da NotaFiscal
+    calcularValorNotaFiscal ( ) : número  {
+        deixe  valorNota  =  0 ;
+        
+        for  ( deixe  i  =  0 ;  i  <  this . items . length ;  i ++ )  {
+            valorNota  +=  isso . itens [ i ] . valor ;
+        }
+
+        return  valorNota ;
+    }
+
+    // Imprime uma NotaFiscal conforme o Layout definido
+    imprimirNotaFiscal ( ) : void  {
+        let  data  =  new  Date ( ) ;
+        deixe  dia  =  data . getData ( ) . toString ( ) ;
+        deixe  diaF  =  ( dia . comprimento  ==  1 ) ? '0'  +  dia : dia ;
+        let  mes  =  ( date . getMonth ( ) + 1 ) . toString ( ) ;
+        deixe  mesF  =  ( mes . comprimento  ==  1 ) ? '0'  +  mes : mes ;
+
+        consola . log ( "---------------------------------------------------------- --------------------------------------------" ) ;
+        consola . log ( 'NOTA FISCAL'  +  '('  +  diaF  +  '/'  +  mesF  +  '/'  +  data . getFullYear ( )  +  ')' ) ;
+        consola . log ( 'ID  do cliente : ' +  this.cliente.getid ( ) ) ;
+        consola . log ( 'Nome do cliente: '  +  this . cliente . getnome ( ) ) ;
+        consola . log ( ' CPF/  CNPJ : ' +  this.client.getcnpjcpf ( ) ) ;
+        consola . log ( "---------------------------------------------------------- --------------------------------------------" ) ;
+        consola . log ( "ITENS" ) ;
+        consola . log ( "---------------------------------------------------------- --------------------------------------------" ) ;
+        consola . log ( 'Seq\tDescrição\t\t\tQTD\tValor Unit\t\tPreço' ) ;
+        consola . log ( '---\t---------\t\t\t---\t----------\t\t-----' ) ;
+        
+        for  ( deixe  i  =  0 ;  i  <  this . items . length ;  i ++ )  {
+            consola . registro (
+                isso . itens [ i ] . id  + '\t'  +
+                isso . itens [ i ] . produto . getdescricao ( )  +  '\t\t\t'  +
+                isso . itens [ i ] . quantidade  +  '\t'  +
+                isso . itens [ i ] . valor . toFixed ( 2 )  +  '\t\t\t'  +
+                ( this . items [ i ] . valor  *  this . items [ i ] . quantidade ) . para Fixo ( 2 )
+            )
+        }
+        
+        consola . log ( "__________________________________________________________________________________" ) ;
+        consola . log ( 'Valor Total:'  +  this . calcularValorNotaFiscal ( ) ) ;
+        
+        
+    }
+}
