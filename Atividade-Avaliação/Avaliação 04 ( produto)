@@ -1,0 +1,49 @@
+export  class  Produto  {
+
+    /* Atributos */
+     id privado : número ;
+     codigo privado : número ; 
+     descrição privada : string ;
+     valorUnitario privado : número ;    
+
+    /* Métodos */
+
+    /* Construtor de métodos */    
+    constructor  ( id : number ,  codigo : number ,  descricao : string ,  valorUnitario : number )  {
+        isso . id  =  id ;
+        isso . codigo  =  codigo ;
+        isso . descricao  =  descricao ;
+        isso . valorUnitario  =  valorUnitario ; 
+    }
+
+    /* Métodos Acessores */
+    getid ( ) : numero  {
+        devolva  isso . identificação ;
+    }
+
+    getdescricao ( ) : string  {
+        devolva  isso . descrição ;
+    }
+
+    getcodigo ( ) : numero  {
+        devolva  isso . código ;
+    }
+
+    getvalorUnitario ( ) : numero  {
+        devolva  isso . valorUnitario ;
+    }
+
+        /* Métodos Modificadores */     
+    setdescricao ( descricao : string ) : void  {
+        isso . descricao  =  descricao ;
+    }
+
+    setcodigo ( codigo : número ) : void  {
+        isso . codigo  =  codigo ;
+    }
+
+    setvalorUnitario ( valorUnitario : number ) : void  {
+        isso . valorUnitario  =  valorUnitario ;
+    } 
+    
+}
