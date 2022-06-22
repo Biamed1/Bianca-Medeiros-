@@ -1,0 +1,58 @@
+import  { Produto }  de  "./produto"
+
+export  class  ItemNotaFiscal  {
+
+    /* Atributos */
+    id : número ;
+    sequencial : número ; 
+    quantidade : número ;
+    produto : Produto ;
+    valor : número ;    
+
+    /* Métodos */
+
+    /* Construtor de métodos */    
+    construtor  ( id : número , 
+                 sequencial : número , 
+                 quantidade : número , 
+                 produto : Produto
+                 )  {
+        isso . id  =  id ;
+        isso . sequencial  =  sequencial ;
+        isso . quantidade  =  quantidade ;
+        isso . produto  =  produto ; 
+        isso . valor  =  0,0 ;
+    }
+
+    /* Métodos Acessores */
+    getid ( ) : numero  {
+        devolva  isso . identificação ;
+    }
+
+    getsequencial ( ) : número  {
+        devolva  isso . sequencial ;
+    }
+
+    getquantidade ( ) : numero  {
+        devolva  isso . quantidade ;
+    }
+
+    getproduto ( ) : Produto  {
+        devolva  isso . produto ;
+    }
+
+    getvalor ( ) : numero  {
+        devolva  isso . valor ;
+    }
+
+        /* Métodos Modificadores */     
+    setsequencial ( sequencial : número ) : void  {
+        isso . sequencial  =  sequencial ;
+    }
+
+    
+    valorItemNotaFiscal ( ) : void  {
+        isso . valor  =  isso . obterproduto ( ) . getvalorUnitário ( ) ;
+    }
+    
+}
