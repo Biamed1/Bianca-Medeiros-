@@ -1,0 +1,62 @@
+import  {  TipoCliente  }  from  "./tipo_cliente" ;
+exportar  classe  Cliente  {
+
+    /* Atributos */
+     id privado : número ;
+     nome privado : string ;
+     codigo privado : número ; 
+     cnpjcpf privado : string ;
+     tipo privado : TipoCliente ;    
+
+    /* Métodos */
+
+    /* Construtor de métodos */    
+    construtor  ( id : número ,  nome : string ,  codigo : número ,  cnpjcpf : string ,  tipo : TipoCliente )  {
+        isso . id  =  id ;
+        isso . nome  =  nome ;
+        isso . codigo  =  codigo ;
+        isso . cnpjcpf  =  cnpjcpf ;
+        isso . tipo  =  tipo ; 
+    }
+
+    /* Métodos Acessores */
+    getid ( ) : numero  {
+        devolva  isso . identificação ;
+    }
+
+    getnome ( ) : string  {
+        devolva  isso . nome ;
+    }
+
+    getcodigo ( ) : numero  {
+        devolva  isso . código ;
+    }
+
+    getcnpjcpf ( ) : string  {
+        devolva  isso . cnpjcpf ;
+    }
+
+    gettipo ( ) : TipoCliente  {
+        devolva  isso . tipo ;
+    }
+
+
+    /* Métodos Modificadores */     
+    setnome ( nome : string ) : void  {
+        isso . nome  =  nome ;
+    }
+
+    setcodigo ( codigo : número ) : void  {
+        isso . codigo  =  codigo ;
+    }
+
+    setcnpjcpf ( cnpjcpf : string ) : void  {
+        isso . cnpjcpf  =  cnpjcpf ;
+    } 
+
+    settipo ( tipo : TipoCliente ) : void  {
+        isso . tipo  =  tipo ;
+    }
+
+
+}
